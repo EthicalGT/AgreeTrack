@@ -44,7 +44,7 @@
 
 /* Hamburger */
 .hamburger {
-  font-size: 26px;
+  font-size: 24px;
   background: transparent;
   border: none;
   color: var(--primary-color);
@@ -106,6 +106,10 @@
 
 /* ===== Desktop / Laptop ===== */
 @media (min-width: 1024px) {
+  .logo {
+    font-size: 24px;
+  }
+
   .hamburger {
     display: none;
   }
