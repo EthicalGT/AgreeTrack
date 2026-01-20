@@ -1,0 +1,120 @@
+:root {
+    --background-color: #f5f5f5;
+    --primary-color: #3CB371;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --cupcake-color: #ebf6f7;
+    --snow-white-color: #fffafa;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--snow-white-color);
+}
+
+.page {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  height: 60px;
+  background: var(--background-color);
+  color: var(--primary-color);
+  align-items: center;
+  gap: 16px;
+  display: flex;
+  padding: 0 16px;
+}
+
+.logo {
+  font-size: 20px;
+  color: var(--primary-color);
+  background-color: transparent;
+  font-weight: bold;
+}
+.logo span {
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: absolute;
+  top: 60px;
+  left: -240px;
+  width: 240px;
+  height: calc(100% - 60px);
+  background: var(--background-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: left 0.3s ease;
+}
+
+.menu-items {
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar a {
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+.sidebar .menu-items:hover {
+  color: var(--primary-color);
+}
+.sidebar .menu-items:hover i {
+  transform: scale(1.1);
+}
+.sidebar .menu-items:hover a {
+  color: var(--primary-color);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* ===== Content ===== */
+.content {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  color: var(--text-color);
+  font-size: 30px;
+}
+
+/* ===== Desktop / Laptop ===== */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+
+  .content {
+    margin-left: calc(240px + 5%);
+  }
+}
